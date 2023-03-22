@@ -1,12 +1,12 @@
 <a name="readme-top"></a>
-[![Contributors](https://img.shields.io/github/contributors/Indiecodermm/readme-generator)](https://github.com/Indiecodermm/readme-generator/graphs/contributors)
-[![Stargazers](https://img.shields.io/github/stars/Indiecodermm/readme-generator)](https://github.com/Indiecodermm/readme-generator/stargazers)
-[![Issues](https://img.shields.io/github/issues/Indiecodermm/readme-generator)](https://github.com/Indiecodermm/readme-generator/issues)
-[![License](https://img.shields.io/github/issues/Indiecodermm/readme-generator)](https://github.com/Indiecodermm/readme-generator/blob/main/LICENSE)
+[![Contributors](https://img.shields.io/github/contributors/IndieCoderMM/readme-generator)](https://github.com/IndieCoderMM/readme-generator/graphs/contributors)
+[![LastUpdate](https://img.shields.io/github/last-commit/IndieCoderMM/readme-generator)](https://github.com/IndieCoderMM/readme-generator/commits/main)
+[![Stargazers](https://img.shields.io/github/stars/IndieCoderMM/readme-generator)](https://github.com/IndieCoderMM/readme-generator/stargazers)
+[![Issues](https://img.shields.io/github/issues/IndieCoderMM/readme-generator)](https://github.com/IndieCoderMM/readme-generator/issues)
+[![License](https://img.shields.io/github/license/IndieCoderMM/readme-generator)](https://github.com/IndieCoderMM/readme-generator/blob/main/LICENSE)
 
-# 💎 Awesome Project
-
-This readme is generated with Ruby.
+# 💎 Project Readme Generator
+Simple console app that can generate awesome readme for your projects
 
 ## 📸 Screenshot
 
@@ -23,9 +23,9 @@ This readme is generated with Ruby.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## ✨ Features
-- Generate readme
-- Easy to use
-- Console apps
+- Generate readme quickly
+- Simple, easy-to-use
+- Console app
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -41,7 +41,7 @@ To run this project locally, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need ruby installed on your machine.
+In order to run this project you need Ruby installed on your machine.
 
 ### Setup
 
@@ -49,7 +49,7 @@ Clone this repository to your desired foler.
 
 ```sh
 cd my-project
-git clone git@github.com:Indiecodermm/readme-generator.git .
+git clone git@github.com:IndieCoderMM/readme-generator.git .
 ```
 
 ### Installation
@@ -81,7 +81,20 @@ rspec spec
 ## 👨‍🚀 Author
 
 **Hein Thant**
-- GitHub: [@Indiecodermm](https://github.com/Indiecodermm)
+
+I am always looking for ways to improve my project. If you have any suggestions or ideas, I would love to hear from you.
+
+[![Github](https://img.shields.io/badge/GitHub-673AB7?style=for-the-badge&logo=github&logoColor=white)](https://github.com/IndieCoderMM)
+[![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/hthantoo)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:hthant00chk@gmail.com)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🎯 Future Features
+
+- [ ] Add more section
+- [ ] Optimize code
+- [ ] Add TOC
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -1,33 +1,47 @@
-require 'erb'
+require './generator'
+require './input'
 
-file = File.open('./template.md')
-template = file.read
-file.close
+INTERPRETERS = {
+    "ruby"=> {
+        install_cmd: "gem install",
+        run_cmd: "ruby main.rb",
+        test_cmd: "rspec spec",
+    }, 
+    "node"=> {
+        install_cmd: "npm install",
+        run_cmd: "npm start",
+        test_cmd: "npm test"
+    }
+}
 
-username = "Indiecodermm"
-repo_name = "readme-generator"
-title = "Awesome Project"
-description = "This readme is generated with Ruby."
-tech_stack = ["Ruby", "ERB", "Rubocop"]
-features = ["Generate readme", "Easy to use", "Console apps"]
+username = "Unknown"
+repo_name = "repo-name"
+author_name = "Unknown"
+title = "Title"
+description = "README generated with Ruby"
+license = "MIT"
+tech_stack = []
+features = []
+future_features = []
 demo_link = "https://google.com"
-interpreters = {"ruby"=> {
-    install_cmd: "gem install",
-    run_cmd: "ruby main.rb",
-    test_cmd: "rspec spec",
-}, "node"=> {
-    install_cmd: "npm install",
-    run_cmd: "npm start",
-    test_cmd: "npm test"
-}}
-interpreter = "ruby"
-interp = interpreters[interpreter]
-install_cmd = interp[:install_cmd]
-run_cmd = interp[:run_cmd]
-test_cmd = interp[:test_cmd]
-author_name = "Hein Thant"
-license_type = "MIT"
+interp_name = "ruby"
+out_dir = './out/readme.md'
 
-readme = ERB.new(template, trim_mode: "%<>")
+username = Input.get("GitHub Username")
+author_name = Input.get("Your Name")
+gmail = Input.get("Your Email")
+linkedin = Input.get("Your LinkedIn")
+repo_name = Input.get("Repo Name")
+title = Input.get("Project Title")
+description = Input.get("Description", required: false)
+demo_link = Input.get("Demo Link", required: false )
+license = Input.get("License Type")
+Input.get_li("Tech Stack", tech_stack)
+Input.get_li("Features", features)
 
-File.write('./out/readme.md', readme.result.lstrip)
+interp_name = Input.get_choice("Choose Interpreter:", ["node", "ruby"])
+interp = INTERPRETERS[interp_name]
+
+Input.get_li("Future Features", future_features)
+
+Generator.generate(out_dir)
