@@ -2,6 +2,9 @@ GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.2)
+    cgi (0.3.6)
+    erb (4.0.2)
+      cgi (>= 0.3.3)
     json (2.6.3)
     parallel (1.22.1)
     parser (3.2.1.1)
@@ -28,6 +31,7 @@ PLATFORMS
   x64-mingw-ucrt
 
 DEPENDENCIES
+  erb
   rubocop (>= 1.0, < 2.0)
 
 BUNDLED WITH
