@@ -1,12 +1,16 @@
 <a name="readme-top"></a>
 [![Contributors](https://img.shields.io/github/contributors/<%= username %>/<%= repo_name %>)](https://github.com/<%= username %>/<%= repo_name %>/graphs/contributors)
+[![LastUpdate](https://img.shields.io/github/last-commit/<%= username %>/<%= repo_name %>)](https://github.com/<%= username %>/<%= repo_name %>/commits/main)
 [![Stargazers](https://img.shields.io/github/stars/<%= username %>/<%= repo_name %>)](https://github.com/<%= username %>/<%= repo_name %>/stargazers)
 [![Issues](https://img.shields.io/github/issues/<%= username %>/<%= repo_name %>)](https://github.com/<%= username %>/<%= repo_name %>/issues)
-[![License](https://img.shields.io/github/issues/<%= username %>/<%= repo_name %>)](https://github.com/<%= username %>/<%= repo_name %>/blob/main/LICENSE)
+[![License](https://img.shields.io/github/license/<%= username %>/<%= repo_name %>)](https://github.com/<%= username %>/<%= repo_name %>/blob/main/LICENSE)
 
 # 💎 <%= title %>
-
+% if description.length
 <%= description %>
+% else
+This file is generated in Ruby.
+% end
 
 
 ## 📸 Screenshot
@@ -32,7 +36,7 @@
 
 ## 🚀 Live Demo
 
-You can visit the [live demo website here](<%= demo_link %>).
+You can visit the [live demo website here](<%= demo_link ? demo_link : "https://google.com" %>).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -42,7 +46,7 @@ To run this project locally, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need <%= interpreter %> installed on your machine.
+In order to run this project you need <%= interp_name.capitalize %> installed on your machine.
 
 ### Setup
 
@@ -58,7 +62,7 @@ git clone git@github.com:<%= username %>/<%= repo_name %>.git .
 Intall this project with:
 
 ```sh
-<%= install_cmd %>
+<%= interp[:install_cmd] %>
 
 ```
 
@@ -67,7 +71,7 @@ Intall this project with:
 To run the project, execute the following command:
 
 ```sh
-<%= run_cmd %>
+<%= interp[:run_cmd] %>
 
 ```
 
@@ -76,7 +80,7 @@ To run the project, execute the following command:
 To run tests, run the following command:
 
 ```sh
-<%= test_cmd %>
+<%= interp[:test_cmd] %>
 
 ```
 
@@ -85,7 +89,20 @@ To run tests, run the following command:
 ## 👨‍🚀 Author
 
 **<%= author_name %>**
-- GitHub: [@<%= username %>](https://github.com/<%= username %>)
+
+I am always looking for ways to improve my project. If you have any suggestions or ideas, I would love to hear from you.
+
+[![Github](https://img.shields.io/badge/GitHub-673AB7?style=for-the-badge&logo=github&logoColor=white)](https://github.com/<%= username %>)
+[![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/<%= linkedin %>)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:<%= gmail %>)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🎯 Future Features
+
+% future_features.each do |todo|
+- [ ] <%= todo %>
+% end
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -103,6 +120,6 @@ If you like this project, please consider giving it a ⭐.
 
 ## 📜 License
 
-This project is [<%= license_type %>](./LICENSE) licensed.
+This project is [<%= license %>](./LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
