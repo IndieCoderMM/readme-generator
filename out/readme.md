@@ -5,43 +5,54 @@
 [![Issues](https://img.shields.io/github/issues/IndieCoderMM/readme-generator)](https://github.com/IndieCoderMM/readme-generator/issues)
 [![License](https://img.shields.io/github/license/IndieCoderMM/readme-generator)](https://github.com/IndieCoderMM/readme-generator/blob/main/LICENSE)
 
-# 💎 Project Readme Generator
-Simple console app that can generate awesome readme for your projects
+<details>
+<summary>Table of Contents</summary>
 
-## 📸 Screenshot
+- [💎 Readme Generator](#about-project)
+  - [📸 Screenshot](#screenshot)
+  - [🧰 Tech Stack](#tech-stack)
+  - [✨ Key Features](#key-features)
+  - [💻 Getting Started](#getting-started)
+  - [🎯 Future Features](#future-features)
+  - [👨‍🚀 Author](#author)
+  - [🤝 Contribution](#contribution)
+  - [💖 Show Your Support](#support)
+  - [📜 License](#license)
+</details>
+
+# 💎 Readme Generator <a name="about-project"></a>
+
+Simple console app that can generate awesome readme files for your projects
+
+## 📸 Screenshot <a name="screenshot"></a>
 
 <img src="https://via.placeholder.com/468x300?text=App+Screenshot+Here" width=468 height=300 alt="screenshot" />
 
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-## 🧰 Tech Stack
+## 🧰 Tech Stack  <a name="tech-stack"></a>
 - Ruby
 - ERB
 - Rubocop
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## ✨ Features
-- Generate readme quickly
+## ✨ Key Features  <a name="key-features"></a>
 - Simple, easy-to-use
+- Generate readme quickly
 - Console app
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🚀 Live Demo
 
-You can visit the [live demo website here](https://google.com).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 💻 Getting Started
+## 💻 Getting Started  <a name="getting-started"></a>
 
 To run this project locally, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need Ruby installed on your machine.
+In order to run this project you need [Ruby](https://www.ruby-lang.org/en/) installed on your machine.
 
 ### Setup
 
@@ -78,11 +89,11 @@ rspec spec
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 👨‍🚀 Author
-
-**Hein Thant**
+## 👨‍🚀 Author  <a name="author"></a>
 
 I am always looking for ways to improve my project. If you have any suggestions or ideas, I would love to hear from you.
+
+**Hein Thant**
 
 [![Github](https://img.shields.io/badge/GitHub-673AB7?style=for-the-badge&logo=github&logoColor=white)](https://github.com/IndieCoderMM)
 [![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/hthantoo)
@@ -90,27 +101,26 @@ I am always looking for ways to improve my project. If you have any suggestions 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🎯 Future Features
-
-- [ ] Add more section
-- [ ] Optimize code
-- [ ] Add TOC
+## 🎯 Future Features  <a name="future-features"></a>
+- [ ] Add toc
+- [ ] Add more sections
+- [ ] Organize code
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🤝 Contributing
+## 🤝 Contribution  <a name="contribution"></a>
 
 Contributions, issues, and feature requests are welcome!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 💖 Show Your Support
+## 💖 Show Your Support  <a name="support"></a>
 
 If you like this project, please consider giving it a ⭐.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 📜 License
+## 📜 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
 

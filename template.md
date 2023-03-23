@@ -5,48 +5,68 @@
 [![Issues](https://img.shields.io/github/issues/<%= username %>/<%= repo_name %>)](https://github.com/<%= username %>/<%= repo_name %>/issues)
 [![License](https://img.shields.io/github/license/<%= username %>/<%= repo_name %>)](https://github.com/<%= username %>/<%= repo_name %>/blob/main/LICENSE)
 
-# 💎 <%= title %>
-% if description.length
-<%= description %>
-% else
-This file is generated in Ruby.
+% if sections[:toc]
+<details>
+<summary>Table of Contents</summary>
+
+% headings.each do |key, data|
+% next unless sections[key.to_sym]
+% if key == "about".to_sym
+- [<%= data[:emoji] %> <%= title %>](#<%= data[:link] %>)
+% else 
+  - [<%= data[:emoji] %> <%= data[:text] %>](#<%= data[:link] %>)
+% end
+% end
+</details>
 % end
 
+# <%= headings[:about][:emoji] %> <%= title %> <a name="<%= headings[:about][:link] %>"></a>
 
-## 📸 Screenshot
+<%= description %>
+
+
+% if sections[:screenshot]
+## <%= headings[:screenshot][:emoji] %> <%= headings[:screenshot][:text] %> <a name="<%= headings[:screenshot][:link] %>"></a>
 
 <img src="https://via.placeholder.com/468x300?text=App+Screenshot+Here" width=468 height=300 alt="screenshot" />
 
+% end
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-## 🧰 Tech Stack
+% if sections[:tech_stack]
+## <%= headings[:tech_stack][:emoji] %> <%= headings[:tech_stack][:text] %>  <a name="<%= headings[:tech_stack][:link] %>"></a>
 % tech_stack.each do |tech|
 - <%= tech %>
 % end
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+% end
 
-## ✨ Features
+% if sections[:key_features]
+## <%= headings[:key_features][:emoji] %> <%= headings[:key_features][:text] %>  <a name="<%= headings[:key_features][:link] %>"></a>
 % features.each do |feature|
 - <%= feature %>
 % end 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+% end
 
-## 🚀 Live Demo
+% if sections[:live_demo]
+## <%= headings[:live_demo][:emoji] %> <%= headings[:live_demo][:text] %>  <a name="<%= headings[:live_demo][:link] %>"></a>
 
-You can visit the [live demo website here](<%= demo_link ? demo_link : "https://google.com" %>).
+You can visit the [live demo website here](<%= demo_link %>).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+% end
 
-## 💻 Getting Started
+## <%= headings[:getting_started][:emoji] %> <%= headings[:getting_started][:text] %>  <a name="<%= headings[:getting_started][:link] %>"></a>
 
 To run this project locally, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need <%= interp_name.capitalize %> installed on your machine.
+In order to run this project you need [<%= interp[:name].capitalize %>](<%= interp[:link] %>) installed on your machine.
 
 ### Setup
 
@@ -86,11 +106,11 @@ To run tests, run the following command:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 👨‍🚀 Author
-
-**<%= author_name %>**
+## <%= headings[:author][:emoji] %> <%= headings[:author][:text] %>  <a name="<%= headings[:author][:link] %>"></a>
 
 I am always looking for ways to improve my project. If you have any suggestions or ideas, I would love to hear from you.
+
+**<%= author_name %>**
 
 [![Github](https://img.shields.io/badge/GitHub-673AB7?style=for-the-badge&logo=github&logoColor=white)](https://github.com/<%= username %>)
 [![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/<%= linkedin %>)
@@ -98,28 +118,29 @@ I am always looking for ways to improve my project. If you have any suggestions 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🎯 Future Features
-
+% if sections[:future_features]
+## <%= headings[:future_features][:emoji] %> <%= headings[:future_features][:text] %>  <a name="<%= headings[:future_features][:link] %>"></a>
 % future_features.each do |todo|
 - [ ] <%= todo %>
 % end
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+% end
 
-## 🤝 Contributing
+## <%= headings[:contribution][:emoji] %> <%= headings[:contribution][:text] %>  <a name="<%= headings[:contribution][:link] %>"></a>
 
 Contributions, issues, and feature requests are welcome!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 💖 Show Your Support
+## <%= headings[:support][:emoji] %> <%= headings[:support][:text] %>  <a name="<%= headings[:support][:link] %>"></a>
 
 If you like this project, please consider giving it a ⭐.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 📜 License
+## <%= headings[:license][:emoji] %> <%= headings[:license][:text] %> <a name="<%= headings[:license][:link] %>"></a>
 
-This project is [<%= license %>](./LICENSE) licensed.
+This project is [<%= license.upcase %>](./LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

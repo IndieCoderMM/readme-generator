@@ -7,7 +7,7 @@ class Generator
         file.close
         template 
     end
-
+    
     def self.generate(out_dir)
         template = Generator.get_template('./template.md')
         readme = ERB.new(template, trim_mode: "%<>")
