@@ -1,44 +1,42 @@
 <a name="readme-top"></a>
-[![Contributors](https://img.shields.io/github/contributors/IndieCoderMM/world-clock-bitmask)](https://github.com/IndieCoderMM/world-clock-bitmask/graphs/contributors)
-[![LastUpdate](https://img.shields.io/github/last-commit/IndieCoderMM/world-clock-bitmask)](https://github.com/IndieCoderMM/world-clock-bitmask/commits/main)
-[![Stargazers](https://img.shields.io/github/stars/IndieCoderMM/world-clock-bitmask)](https://github.com/IndieCoderMM/world-clock-bitmask/stargazers)
-[![Issues](https://img.shields.io/github/issues/IndieCoderMM/world-clock-bitmask)](https://github.com/IndieCoderMM/world-clock-bitmask/issues)
-[![License](https://img.shields.io/github/license/IndieCoderMM/world-clock-bitmask)](https://github.com/IndieCoderMM/world-clock-bitmask/blob/main/LICENSE)
+[![Contributors](https://img.shields.io/github/contributors/IndieCoderMM/readme-generator)](https://github.com/IndieCoderMM/readme-generator/graphs/contributors)
+[![LastUpdate](https://img.shields.io/github/last-commit/IndieCoderMM/readme-generator)](https://github.com/IndieCoderMM/readme-generator/commits/main)
+[![Stargazers](https://img.shields.io/github/stars/IndieCoderMM/readme-generator)](https://github.com/IndieCoderMM/readme-generator/stargazers)
+[![Issues](https://img.shields.io/github/issues/IndieCoderMM/readme-generator)](https://github.com/IndieCoderMM/readme-generator/issues)
+[![License](https://img.shields.io/github/license/IndieCoderMM/readme-generator)](https://github.com/IndieCoderMM/readme-generator/blob/main/LICENSE)
 
 <details>
 <summary>Table of Contents</summary>
 
-- [💎 World Clock - Bitmask App ](#-world-clock---bitmask-app-)
-  - [🧰 Tech Stack  ](#-tech-stack--)
-  - [✨ Key Features  ](#-key-features--)
-  - [💻 Getting Started  ](#-getting-started--)
-    - [Prerequisites](#prerequisites)
-    - [Setup](#setup)
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [Run tests](#run-tests)
-  - [👨‍🚀 Author  ](#-author--)
-  - [🎯 Future Features  ](#-future-features--)
-  - [🤝 Contribution  ](#-contribution--)
-  - [💖 Show Your Support  ](#-show-your-support--)
-  - [📜 License ](#-license-)
+- [💎 Readme Generator](#about-project)
+  - [🧰 Tech Stack](#tech-stack)
+  - [✨ Key Features](#key-features)
+  - [💻 Getting Started](#getting-started)
+  - [🎯 Future Features](#future-features)
+  - [👨‍🚀 Author](#author)
+  - [🤝 Contribution](#contribution)
+  - [💖 Show Your Support](#support)
+  - [📜 License](#license)
 </details>
 
-# 💎 World Clock - Bitmask App <a name="about-project"></a>
+# 💎 Readme Generator <a name="about-project"></a>
 
-In this app, users can search cities by GMT offsets. Searching is implemented using bitmask technique instead of regular conditionals. Timezones data are encoded into binary sequences and cities are filtered through binary operation with bitmask of target timezone.
+A simple console app that can generate awesome readme file for your projects
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🧰 Tech Stack  <a name="tech-stack"></a>
 - Ruby
+- ERB
+- Rubocop
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## ✨ Key Features  <a name="key-features"></a>
-- Search cities by timezone
-- Bitmask implementation
+- Generate readme quickly
+- Simple, easy-to-use
+- Command line interface
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -57,7 +55,7 @@ Clone this repository to your desired foler.
 
 ```sh
 cd my-project
-git clone git@github.com:IndieCoderMM/world-clock-bitmask.git .
+git clone git@github.com:IndieCoderMM/readme-generator.git .
 ```
 
 ### Installation
@@ -99,8 +97,8 @@ I am always looking for ways to improve my project. If you have any suggestions 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🎯 Future Features  <a name="future-features"></a>
-- [ ] Feature to add new city
-- [ ] Add more search criterias
+- [ ] Improve template
+- [ ] Organize code
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
