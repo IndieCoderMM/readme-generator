@@ -93,3 +93,5 @@ sections[:future_features] = future_features.length.positive?
 
 
 Generator.generate(out_dir)
+
+puts "Your README file has been successfully generated at #{out_dir}."
