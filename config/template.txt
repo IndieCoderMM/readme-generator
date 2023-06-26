@@ -1,3 +1,5 @@
+<% interp = INTERPRETERS[interp_name] %>
+
 <a name="readme-top"></a>
 [![Contributors](https://img.shields.io/github/contributors/<%= username %>/<%= repo_name %>)](https://github.com/<%= username %>/<%= repo_name %>/graphs/contributors)
 [![LastUpdate](https://img.shields.io/github/last-commit/<%= username %>/<%= repo_name %>)](https://github.com/<%= username %>/<%= repo_name %>/commits/main)
@@ -5,12 +7,11 @@
 [![Issues](https://img.shields.io/github/issues/<%= username %>/<%= repo_name %>)](https://github.com/<%= username %>/<%= repo_name %>/issues)
 [![License](https://img.shields.io/github/license/<%= username %>/<%= repo_name %>)](https://github.com/<%= username %>/<%= repo_name %>/blob/main/LICENSE)
 
-% if sections[:toc]
+% if include_toc
 <details>
 <summary>Table of Contents</summary>
 
-% headings.each do |key, data|
-% next unless sections[key.to_sym]
+% HEADINGS.each do |key, data|
 % if key == "about".to_sym
 - [<%= data[:emoji] %> <%= title %>](#<%= data[:link] %>)
 % else 
@@ -20,13 +21,13 @@
 </details>
 % end
 
-# <%= headings[:about][:emoji] %> <%= title %> <a name="<%= headings[:about][:link] %>"></a>
+# <%= HEADINGS[:about][:emoji] %> <%= title %> <a name="<%= HEADINGS[:about][:link] %>"></a>
 
-<%= description %>
+<%= description.empty? ? "This project is just awesome." : description %>
 
 
-% if sections[:screenshot]
-## <%= headings[:screenshot][:emoji] %> <%= headings[:screenshot][:text] %> <a name="<%= headings[:screenshot][:link] %>"></a>
+% if include_ss
+## <%= HEADINGS[:screenshot][:emoji] %> <%= HEADINGS[:screenshot][:text] %> <a name="<%= HEADINGS[:screenshot][:link] %>"></a>
 
 <img src="https://via.placeholder.com/468x300?text=App+Screenshot+Here" width=468 height=300 alt="screenshot" />
 
@@ -34,8 +35,8 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-% if sections[:tech_stack]
-## <%= headings[:tech_stack][:emoji] %> <%= headings[:tech_stack][:text] %>  <a name="<%= headings[:tech_stack][:link] %>"></a>
+% unless tech_stack.empty?
+## <%= HEADINGS[:tech_stack][:emoji] %> <%= HEADINGS[:tech_stack][:text] %>  <a name="<%= HEADINGS[:tech_stack][:link] %>"></a>
 % tech_stack.each do |tech|
 - <%= tech %>
 % end
@@ -43,8 +44,8 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 % end
 
-% if sections[:key_features]
-## <%= headings[:key_features][:emoji] %> <%= headings[:key_features][:text] %>  <a name="<%= headings[:key_features][:link] %>"></a>
+% unless features.empty?
+## <%= HEADINGS[:key_features][:emoji] %> <%= HEADINGS[:key_features][:text] %>  <a name="<%= HEADINGS[:key_features][:link] %>"></a>
 % features.each do |feature|
 - <%= feature %>
 % end 
@@ -52,15 +53,15 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 % end
 
-% if sections[:live_demo]
-## <%= headings[:live_demo][:emoji] %> <%= headings[:live_demo][:text] %>  <a name="<%= headings[:live_demo][:link] %>"></a>
+% unless demo_link.empty?
+## <%= HEADINGS[:live_demo][:emoji] %> <%= HEADINGS[:live_demo][:text] %>  <a name="<%= HEADINGS[:live_demo][:link] %>"></a>
 
 You can visit the [live demo website here](<%= demo_link %>).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 % end
 
-## <%= headings[:getting_started][:emoji] %> <%= headings[:getting_started][:text] %>  <a name="<%= headings[:getting_started][:link] %>"></a>
+## <%= HEADINGS[:getting_started][:emoji] %> <%= HEADINGS[:getting_started][:text] %>  <a name="<%= HEADINGS[:getting_started][:link] %>"></a>
 
 To run this project locally, follow these steps.
 
@@ -106,7 +107,7 @@ To run tests, run the following command:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## <%= headings[:author][:emoji] %> <%= headings[:author][:text] %>  <a name="<%= headings[:author][:link] %>"></a>
+## <%= HEADINGS[:author][:emoji] %> <%= HEADINGS[:author][:text] %>  <a name="<%= HEADINGS[:author][:link] %>"></a>
 
 I am always looking for ways to improve my project. If you have any suggestions or ideas, I would love to hear from you.
 
@@ -118,8 +119,8 @@ I am always looking for ways to improve my project. If you have any suggestions 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-% if sections[:future_features]
-## <%= headings[:future_features][:emoji] %> <%= headings[:future_features][:text] %>  <a name="<%= headings[:future_features][:link] %>"></a>
+% unless future_features.empty?
+## <%= HEADINGS[:future_features][:emoji] %> <%= HEADINGS[:future_features][:text] %>  <a name="<%= HEADINGS[:future_features][:link] %>"></a>
 % future_features.each do |todo|
 - [ ] <%= todo %>
 % end
@@ -127,19 +128,19 @@ I am always looking for ways to improve my project. If you have any suggestions 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 % end
 
-## <%= headings[:contribution][:emoji] %> <%= headings[:contribution][:text] %>  <a name="<%= headings[:contribution][:link] %>"></a>
+## <%= HEADINGS[:contribution][:emoji] %> <%= HEADINGS[:contribution][:text] %>  <a name="<%= HEADINGS[:contribution][:link] %>"></a>
 
 Contributions, issues, and feature requests are welcome!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## <%= headings[:support][:emoji] %> <%= headings[:support][:text] %>  <a name="<%= headings[:support][:link] %>"></a>
+## <%= HEADINGS[:support][:emoji] %> <%= HEADINGS[:support][:text] %>  <a name="<%= HEADINGS[:support][:link] %>"></a>
 
 If you like this project, please consider giving it a ⭐.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## <%= headings[:license][:emoji] %> <%= headings[:license][:text] %> <a name="<%= headings[:license][:link] %>"></a>
+## <%= HEADINGS[:license][:emoji] %> <%= HEADINGS[:license][:text] %> <a name="<%= HEADINGS[:license][:link] %>"></a>
 
 This project is [<%= license.upcase %>](./LICENSE) licensed.
 
